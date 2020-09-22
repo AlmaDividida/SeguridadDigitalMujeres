@@ -1,0 +1,439 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+@font-face {
+    font-family: "Aquire";
+    src: url("../font/AquireBold-8Ma60.otf");
+}
+
+@keyframes slideup {
+    from {
+        margin-bottom: 100%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+
+/* GLOBALES */
+
+img {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    img {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #f88f18;
+}
+
+
+/* UTILIDADES */
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+.mw-400 {
+    max-width: 40rem;
+}
+.mw-500 {
+    max-width: 50rem;
+}
+
+.mw-600 {
+    max-width: 60rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-aquire {
+    font-family: 'Aquire', Courier, monospace;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.section {
+    margin-top: 4rem;
+}
+
+.img-shadow {
+    box-shadow: 1px 1px 10px #222222;
+}
+
+@media (min-width: 768px) {
+    .section {
+        margin-top: 6rem;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+.rotate-reset {
+    transform: rotate(0deg);
+    transition: .3s;
+}
+
+
+/* Parallax Effect*/
+
+.bg-parallax {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media (min-width:768px) {
+    .bg-parallax {
+        min-height: 40vh;
+    }
+}
+
+.bg-1 {
+    background-image: url(../img/fondo.png);
+}
+
+.bg-2 {
+    background-image: url(../img/fondo2.jpg);
+}
+
+.bg-3 {
+    background-image: url(../img/fondo3.jpg);
+    background-position: left;
+}
+
+@media (min-width: 768px) {
+    .bg-3 {
+        background-position: left;
+    }
+}
+
+
+/* Buttons */
+
+.btn {
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #202020;
+}
+
+.btn-primary:hover {
+    background: #ffaa48;
+    color: #202020;
+    transition: 1s;
+}
+
+
+/* HEADER */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    min-height: 9rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-dark {
+    background-color: #222222;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.logo-text{
+    max-width: 34rem;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        min-height: 6rem;
+    }
+    .logo h1 {
+        max-width: none;
+        margin: 0;
+        line-height: 0;
+    }
+}
+
+.drop-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toogle {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    line-height: 1;
+    padding: 0;
+    outline: none;
+    color: #e4e4e4;
+    cursor: pointer;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav a {
+    border-top: 1px solid #222222;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #222222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav a:hover {
+    color: #FBB666;
+    transition: .5s;
+}
+
+@media (min-width: 1200px) {
+    .site-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .drop-menu {
+        display: none;
+    }
+    #nav {
+        background-color: transparent;
+        flex-direction: row;
+    }
+    #nav a {
+        border-top: 0;
+        width: auto;
+        color: #fff;
+        margin-right: 3rem;
+    }
+    #nav a:last-of-type {
+        margin-right: 0;
+    }
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    width: 95%;
+    max-width: 70rem;
+}
+
+.phrase {
+    height: 50vh;
+    line-height: 1;
+}
+
+.phrase-text {
+    animation-duration: 2s;
+    animation-name: slideup;
+}
+
+.author {
+    font-style: italic;
+    text-align: right;
+}
+
+
+/* PROFILE */
+
+.profile {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    max-width: 10rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .profile {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .profile-info {
+        flex-basis: 25%;
+    }
+    .profile-aside {
+        flex-basis: calc(75% - 4rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.social-icons {
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-icons a {
+    color: #202020;
+    font-size: 3.5rem;
+}
+
+.social-icons a:hover {
+    color: #f88f18;
+    transition: .5s;
+}
+
+
+/* PARALLAX BACKGROUND 2 */
+
+.bg2-content p {
+    max-width: 80rem;
+}
+
+
+/* CURRICULUM */
+
+@media (min-width: 768px) {
+    .curriculum-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .curriculum-main,
+    .curriculum-aside {
+        flex-basis: calc(50% - 4rem);
+    }
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Aquire', Courier, monospace;
+}
+
+
+/* INTER PAGES */
+
+/* Projects - Page */
+
+.projects {
+    display: grid;
+    gap: 8rem;
+}
+
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project {
+    border-radius: .5rem;
+}
+
+.project img {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.projects a {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: block;
+}
+
+blockquote {
+    border-top: 1px solid #f88f18;
+    font-weight: 200;
+}
