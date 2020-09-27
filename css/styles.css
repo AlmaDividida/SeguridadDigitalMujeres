@@ -13,6 +13,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
+    background-color: white;
 }
 
 @font-face {
@@ -34,6 +35,7 @@ body {
 
 img {
     max-width: 100%;
+    padding: 0 10%;
 }
 
 @media (min-width: 768px) {
@@ -329,11 +331,10 @@ a {
 .profile {
     display: flex;
     flex-direction: column-reverse;
-    flex-wrap: wrap;
 }
 
 .profile-image {
-    max-width: 10rem;
+    max-width: 15rem;
     border-radius: 50%;
 }
 
